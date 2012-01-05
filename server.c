@@ -3,10 +3,10 @@
  License: GPL
 
  Description:
- Listens on UDP socket and builds up the message paload by parsing the UDP source port values of the UDP packets 
+ Listens on UDP socket and builds up the message payload by parsing the UDP source port values from the incoming UDP packets.
  
  Execution:
-  server
+  ./server
 */
 
 #include <fcntl.h>
@@ -49,7 +49,7 @@ int main(int argc, char *argv) {
     type = SOCK_DGRAM;
     ppe = getprotobyname("udp");
 
-    /* Allocate a socket */
+    // Allocate a socket 
     s = socket(PF_INET, type, ppe->p_proto);
     if(s < 0) {
         sprintf(tmp, "can't create socket: %s\n", strerror(errno));
@@ -58,7 +58,7 @@ int main(int argc, char *argv) {
 	
 	printf("created a UPD socket on port %d\n", LISEN_PORT);
 	
-    /* Bind the socket */
+    // Bind the socket 
     if(bind(s, (struct sockaddr *)&sin, sizeof(sin)) < 0) {
 	  sprintf(tmp, "can't bind to socket: %s\n", strerror(errno));
       perror(tmp);
@@ -74,7 +74,7 @@ int main(int argc, char *argv) {
             is_continue=0;
          } else {
             buf[nr]=0;
-            printf("recived from ip: %s port: hex 0x%x dec %d\n" , inet_ntoa(fsin.sin_addr), ntohs(fsin.sin_port), ntohs(fsin.sin_port));
+            printf("received from ip: %s port: hex 0x%x dec %d\n" , inet_ntoa(fsin.sin_addr), ntohs(fsin.sin_port), ntohs(fsin.sin_port));
             //printf("recived data:  %s\n" , buf);
             
             port=ntohs(fsin.sin_port);
@@ -88,7 +88,7 @@ int main(int argc, char *argv) {
         }
     }
     
-    printf("Recived %d characters:\n" , index);
+    printf("Received %d characters:\n" , index);
 
     for(i=0; i<index; i++) {
         printf("msg[%d]=char %c hex 0x%x dec %d\n", i, msg[i], msg[i], msg[i] );
@@ -96,4 +96,3 @@ int main(int argc, char *argv) {
     
     return 0;
 }
-

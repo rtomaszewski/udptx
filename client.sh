@@ -6,8 +6,8 @@
 # Sent data over UDP connection by using the source UDP port for payload transmission
 #
 # Execution:
-#  client.sh <ip> <msg>
-#    <ip>  - represent the server that can recive the the packets 
+#  ./client.sh <ip> <msg>
+#    <ip>  - represent the server that can receive the packets 
 #    <msg> - the data we want to sent to server <ip>
 #
 # Example:
