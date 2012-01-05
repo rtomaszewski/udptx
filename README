@@ -1,0 +1,17 @@
+This is a simple demonstration of an idea of how to sent a network data over UDP connection using only the UDP source port to carry the data payload.
+
+For more info please check my blog:
+http://rtomaszewski.blogspot.com
+
+--- compilatio ---
+
+./gcc -o server server.c
+
+--- to run the server ---
+
+./server
+
+--- to run the client ---
+
+./client.sh
+
