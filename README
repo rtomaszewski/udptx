@@ -1,4 +1,6 @@
-This program is a simple demonstration of an idea how to sent data over network using the UDP as transport protocol.  The data is transferred and encoded within the UDP datagrams using the UDP source port value. All UDP datagrams carry empty payload. 
+This program is a simple demonstration of an idea how to sent data over network using the UDP as transport protocol.
+The data is transferred and encoded within the UDP datagrams using the UDP source port value. All UDP datagrams 
+carry empty payload. 
 
 For more info please check my blog:
 http://rtomaszewski.blogspot.com
