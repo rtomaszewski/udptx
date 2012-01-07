@@ -3,7 +3,7 @@ The data is transferred and encoded within the UDP datagrams using the UDP sourc
 carry empty payload. 
 
 For more info please check my blog:
-http://rtomaszewski.blogspot.com
+http://rtomaszewski.blogspot.com/search/label/udptx
 
 --- compilation ---
 
